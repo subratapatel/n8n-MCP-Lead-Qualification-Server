@@ -1,0 +1,139 @@
+{
+  "name": "MCP-Lead-Qualification-Server",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "34c4dbd4-04ca-429a-a447-9de5c62c8819"
+      },
+      "type": "@n8n/n8n-nodes-langchain.mcpTrigger",
+      "typeVersion": 1,
+      "position": [
+        272,
+        -16
+      ],
+      "id": "274958f3-7b9e-473c-befa-d908eafc3dca",
+      "name": "MCP Server Trigger",
+      "webhookId": "34c4dbd4-04ca-429a-a447-9de5c62c8819"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1z765HXg2Qd5nqo8WlS6s8A2IUd4mmuTtDGKo9ndLwnw",
+          "mode": "list",
+          "cachedResultName": "Lead Qualification",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1z765HXg2Qd5nqo8WlS6s8A2IUd4mmuTtDGKo9ndLwnw/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1o0muUVu2HP3yDmC4jLgqmhtmwzTkFoobPofkus3oktY/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Name": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Name', ``, 'string') }}",
+            "Date": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Date', ``, 'string') }}",
+            "Time": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Time', ``, 'string') }}",
+            "user questions": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('user_questions', ``, 'string') }}",
+            "Summary": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Summary', ``, 'string') }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Name",
+              "displayName": "Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Date",
+              "displayName": "Date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Time",
+              "displayName": "Time",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "user questions",
+              "displayName": "user questions",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Summary",
+              "displayName": "Summary",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheetsTool",
+      "typeVersion": 4.7,
+      "position": [
+        352,
+        208
+      ],
+      "id": "3d5f18bd-0ef0-46f9-a45b-84d2246bc434",
+      "name": "Append row in sheet in Google Sheets",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "j8GBkXVEq33MCw6a",
+          "name": "Google Sheets account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Append row in sheet in Google Sheets": {
+      "ai_tool": [
+        [
+          {
+            "node": "MCP Server Trigger",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "b7f5e854-2287-42a8-9ae7-7e5eed490470",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "f8945e1676b80d29b396e19cfc031fd1282160af6898890d6372b6d47bd9e91f"
+  },
+  "id": "k0BLCMAXzBR2gvD5",
+  "tags": []
+}
