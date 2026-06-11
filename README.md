@@ -1,1 +1,1 @@
-# n8n-MCP-Lead-Qualification-Server
+Please refer the Documentation file.
